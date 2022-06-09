@@ -1,5 +1,10 @@
 #!/usr/bin/env node
 
-import { even } from '../src/index.js';
+import { game, checkAnswer } from '../src/games/even.js';
+import { getRandomInt } from '../src/index.js';
 
-even();
+game(
+  'Answer "yes" if the number is even, otherwise answer "no".',
+  getRandomInt,
+  checkAnswer,
+);
