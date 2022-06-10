@@ -18,9 +18,11 @@ export const game = (rulesOfGame, funcRandom, funcCheck, text = '') => {
     if (answer === rightAnswer) {
       console.log('Correct!');
       counter += 1;
-    } else {
+    } else if (text) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
       console.log(text);
+    } else {
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
     }
   } while (counter !== 3);
 
