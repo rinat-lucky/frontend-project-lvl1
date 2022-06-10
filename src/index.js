@@ -20,7 +20,7 @@ export const game = (rulesOfGame, funcRandom, funcCheck) => {
       counter += 1;
     } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
-      console.log(`Let\'s try again, ${username}!`);
+      console.log(`Let's try again, ${username}!`);
     }
   } while (counter !== 3);
 
