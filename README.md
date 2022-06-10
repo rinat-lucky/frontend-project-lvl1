@@ -5,6 +5,12 @@
 
 [![NODE CI](https://github.com/rinat-lucky/frontend-project-lvl1/workflows/Node%20CI/badge.svg)](https://github.com/rinat-lucky/frontend-project-lvl1/actions)
 
+## Install
+
+```sh
+make install
+```
+
 ### Asciinema's:
  
 brain-even
