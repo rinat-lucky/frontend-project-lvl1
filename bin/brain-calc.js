@@ -7,5 +7,4 @@ game(
   'What is the result of the expression?',
   getRandomExp,
   checkAnswer,
-  `Let's try again, ${username}!`,
 );
