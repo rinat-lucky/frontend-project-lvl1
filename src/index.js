@@ -6,7 +6,7 @@ console.log('Welcome to the Brain Games!');
 export const username = readlineSync.question('May I have your name? ');
 console.log(`Hello, ${username}!`);
 
-export const game = (rulesOfGame, funcRandom, funcCheck, text = '') => {
+export const game = (rulesOfGame, funcRandom, funcCheck) => {
   let counter = 0;
   console.log(rulesOfGame);
   do {
@@ -20,7 +20,7 @@ export const game = (rulesOfGame, funcRandom, funcCheck, text = '') => {
       counter += 1;
     } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
-      console.log(text);
+      console.log(`Let's try again, ${username}!`);
     } 
   } while (counter !== 3);
 
