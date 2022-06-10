@@ -10,7 +10,7 @@
 ## Install
 
 ```sh
-make install
+npm ci
 ```
 
 ## Asciinema's:
