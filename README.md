@@ -19,7 +19,7 @@
 
 ## Installation
 
-To install "Brain-Games" locally:
+To install "Brain Games" locally:
 
 ```sh
 git clone https://github.com/rinat-lucky/frontend-project-lvl1.git
