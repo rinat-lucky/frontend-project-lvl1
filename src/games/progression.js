@@ -1,4 +1,4 @@
-import { game, getRandomInt } from '../index.js';
+import { startGame, getRandomInt } from '../index.js';
 
 let missedNum;
 
@@ -18,4 +18,4 @@ const getRandomProgression = () => {
 
 const checkAnswer = () => missedNum.toString();
 
-export { game, getRandomProgression, checkAnswer };
+export { startGame, getRandomProgression, checkAnswer };

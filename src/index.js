@@ -6,7 +6,7 @@ console.log('Welcome to the Brain Games!');
 export const username = readlineSync.question('May I have your name? ');
 console.log(`Hello, ${username}!`);
 
-export const game = (rulesOfGame, funcRandom, funcCheck) => {
+export const startGame = (rulesOfGame, funcRandom, funcCheck) => {
   let counter = 0;
   console.log(rulesOfGame);
   do {

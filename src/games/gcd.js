@@ -1,4 +1,4 @@
-import { game, getRandomInt } from '../index.js';
+import { startGame, getRandomInt } from '../index.js';
 
 const getRandomNums = () => {
   const num1 = getRandomInt();
@@ -20,4 +20,4 @@ const checkAnswer = (exp) => {
   return gcd.toString();
 };
 
-export { game, getRandomNums, checkAnswer };
+export { startGame, getRandomNums, checkAnswer };

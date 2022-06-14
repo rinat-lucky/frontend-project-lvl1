@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import { game, getRandomExp, checkAnswer } from '../src/games/calc.js';
+import { startGame, getRandomExp, checkAnswer } from '../src/games/calc.js';
 
-game(
+startGame(
   'What is the result of the expression?',
   getRandomExp,
   checkAnswer,

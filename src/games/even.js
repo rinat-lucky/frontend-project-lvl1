@@ -1,4 +1,4 @@
-import { game } from '../index.js';
+import { startGame } from '../index.js';
 
 const checkAnswer = (number) => {
   if (number % 2 === 0) {
@@ -7,4 +7,4 @@ const checkAnswer = (number) => {
   return 'no';
 };
 
-export { game, checkAnswer };
+export { startGame, checkAnswer };

@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import { game, getRandomNums, checkAnswer } from '../src/games/gcd.js';
+import { startGame, getRandomNums, checkAnswer } from '../src/games/gcd.js';
 
-game(
+startGame(
   'Find the greatest common divisor of given numbers.',
   getRandomNums,
   checkAnswer,

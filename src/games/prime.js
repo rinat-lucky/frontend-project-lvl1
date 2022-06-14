@@ -1,4 +1,4 @@
-import { game, getRandomInt } from '../index.js';
+import { startGame, getRandomInt } from '../index.js';
 
 const getRandomNum = () => getRandomInt(1, 30);
 
@@ -11,4 +11,4 @@ const checkAnswer = (number) => {
   return 'yes';
 };
 
-export { game, getRandomNum, checkAnswer };
+export { startGame, getRandomNum, checkAnswer };
