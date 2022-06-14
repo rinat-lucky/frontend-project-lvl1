@@ -1,5 +1,15 @@
 # Brain Games (by Rinat_K)
 
+"Brain Games" - is a set of five console games: 
+
+* Brain-Even
+* Brain-Calc
+* Brain-GCD (greatest common divisor)
+* Brain-Progression
+* Brain-Prime
+
+----
+
 ## Hexlet tests and linter status:
 [![Actions Status](https://github.com/rinat-lucky/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/rinat-lucky/frontend-project-lvl1/actions)
 
