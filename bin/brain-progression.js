@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 
-import { startGame, getRandomProgression, checkAnswer } from '../src/games/progression.js';
+import start from '../src/cli.js';
+import { rules, question, checkAnswer } from '../src/games/progression.js';
 
-startGame(
-  'What number is missing in the progression?',
-  getRandomProgression,
+start(
+  rules,
+  question,
   checkAnswer,
 );

@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 
-import { startGame, getRandomNum, checkAnswer } from '../src/games/prime.js';
+import start from '../src/cli.js';
+import { rules, question, checkAnswer } from '../src/games/prime.js';
 
-startGame(
-  'Answer "yes" if given number is prime. Otherwise answer "no".',
-  getRandomNum,
+start(
+  rules,
+  question,
   checkAnswer,
 );

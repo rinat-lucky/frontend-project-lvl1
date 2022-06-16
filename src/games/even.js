@@ -1,4 +1,8 @@
-import { startGame } from '../index.js';
+import { getRandomInt } from '../index.js';
+
+const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
+
+const question = () => getRandomInt(1, 30);
 
 const checkAnswer = (number) => {
   if (number % 2 === 0) {
@@ -7,4 +11,4 @@ const checkAnswer = (number) => {
   return 'no';
 };
 
-export { startGame, checkAnswer };
+export { rules, question, checkAnswer };

@@ -1,6 +1,8 @@
-import { startGame, getRandomInt } from '../index.js';
+import { getRandomInt } from '../index.js';
 
-const getRandomNum = () => getRandomInt(1, 30);
+const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
+const question = () => getRandomInt(1, 30);
 
 const checkAnswer = (number) => {
   for (let i = 2; i < number; i += 1) {
@@ -11,4 +13,4 @@ const checkAnswer = (number) => {
   return 'yes';
 };
 
-export { startGame, getRandomNum, checkAnswer };
+export { rules, question, checkAnswer };

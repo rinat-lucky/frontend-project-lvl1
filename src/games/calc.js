@@ -1,6 +1,8 @@
-import { startGame, getRandomInt } from '../index.js';
+import { getRandomInt } from '../index.js';
 
-const getRandomExp = () => {
+const rules = 'What is the result of the expression?';
+
+const question = () => {
   const num1 = getRandomInt();
   const num2 = getRandomInt();
   const operators = ['+', '-', '*'];
@@ -23,4 +25,4 @@ const checkAnswer = (exp) => { // функция принимает на вхо�
   }
 };
 
-export { startGame, getRandomExp, checkAnswer };
+export { rules, question, checkAnswer };

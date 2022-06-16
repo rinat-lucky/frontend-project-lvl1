@@ -1,8 +1,10 @@
-import { startGame, getRandomInt } from '../index.js';
+import { getRandomInt } from '../index.js';
+
+const rules = 'What number is missing in the progression?';
 
 let missedNum;
 
-const getRandomProgression = () => {
+const question = () => {
   const stepOfProgression = getRandomInt(1, 5);
   const firstNum = getRandomInt(1, 15);
   const arr = [firstNum];
@@ -18,4 +20,4 @@ const getRandomProgression = () => {
 
 const checkAnswer = () => missedNum.toString();
 
-export { startGame, getRandomProgression, checkAnswer };
+export { rules, question, checkAnswer };
