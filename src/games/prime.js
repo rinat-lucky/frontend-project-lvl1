@@ -6,7 +6,7 @@ const question = () => getRandomInt(1, 30);
 
 const checkAnswer = (number) => {
   for (let i = 2; i < number; i += 1) {
-    if (number % i === 0 || number === 2) {
+    if (number % i === 0 || number === 1) {
       return 'no';
     }
   }

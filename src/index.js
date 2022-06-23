@@ -9,7 +9,7 @@ export default (rules, question, answer, input, output) => {
 
   output(rules);
   let counter = 0;
-  do {
+  while (counter !== 3) {
     const currentQuestion = question();
     const correctAnswer = answer(currentQuestion);
 
@@ -25,7 +25,7 @@ export default (rules, question, answer, input, output) => {
       output(`Let's try again, ${username}!`);
       return;
     }
-  } while (counter !== 3);
+  };
 
   output(`Congratulations, ${username}!`);
 };
