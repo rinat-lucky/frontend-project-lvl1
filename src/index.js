@@ -1,7 +1,7 @@
 export default (rules, question, answer, input, output) => {
   output('Welcome to the Brain Games!');
-  const username = input('May I have your name? ');
-  output(`Hello, ${username}!`);
+  const userName = input('May I have your name? ');
+  output(`Hello, ${userName}!`);
 
   if (!(rules && question && answer)) {
     return;
@@ -22,9 +22,9 @@ export default (rules, question, answer, input, output) => {
       counter += 1;
     } else {
       output(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      output(`Let's try again, ${username}!`);
+      output(`Let's try again, ${userName}!`);
       return;
     }
   }
-  output(`Congratulations, ${username}!`);
+  output(`Congratulations, ${userName}!`);
 };
