@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { startGame } from './index.js';
+import startGame from './index.js';
 
 export default (rules, question, answer) => {
   const inText = (msg) => readlineSync.question(msg);

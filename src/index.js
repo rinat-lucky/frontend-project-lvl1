@@ -1,27 +1,27 @@
-export const startGame = (gameRules, gameQuestion, gameAnswer, inText, outText) => {
+export default (rules, question, answer, inText, outText) => {
   outText('Welcome to the Brain Games!');
   const username = inText('May I have your name? ');
   outText(`Hello, ${username}!`);
 
-  if (!(gameRules && gameQuestion && gameAnswer)) {
+  if (!(rules && question && answer)) {
     return;
   }
 
-  outText(gameRules);
+  outText(rules);
   let counter = 0;
   do {
-    const question = gameQuestion();
-    const answer = gameAnswer(question);
+    const currentQuestion = question();
+    const correctAnswer = answer(currentQuestion);
 
-    outText(`Question: ${question}`);
+    outText(`Question: ${currentQuestion}`);
 
     const userAnswer = inText('Your answer: ');
 
-    if (userAnswer === answer) {
+    if (userAnswer === correctAnswer) {
       outText('Correct!');
       counter += 1;
     } else {
-      outText(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.`);
+      outText(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       outText(`Let's try again, ${username}!`);
       return;
     }
