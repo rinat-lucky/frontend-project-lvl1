@@ -17,13 +17,12 @@ export default (rules, question, answer, input, output) => {
 
     const userAnswer = input('Your answer: ');
 
-    if (userAnswer === correctAnswer) {
-      output('Correct!');
-    } else {
+    if (userAnswer !== correctAnswer) {
       output(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       output(`Let's try again, ${userName}!`);
       return;
     }
+    output('Correct!');
   }
   output(`Congratulations, ${userName}!`);
 };
