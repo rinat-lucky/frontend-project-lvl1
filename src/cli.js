@@ -1,8 +1,8 @@
 import readlineSync from 'readline-sync';
-import startGame from './index.js';
+import playGame from './index.js';
 
 export default (rules, question, answer) => {
-  const inText = (msg) => readlineSync.question(msg);
-  const outText = (msg) => console.log(msg);
-  startGame(rules, question, answer, inText, outText);
+  const input = (msg) => readlineSync.question(msg);
+  const output = (msg) => console.log(msg);
+  playGame(rules, question, answer, input, output);
 };
