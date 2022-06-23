@@ -8,8 +8,8 @@ export default (rules, question, answer, input, output) => {
   }
 
   output(rules);
-  let counter = 0;
-  while (counter !== 3) {
+
+  for (let i = 0; i !== 3; i += 1) {
     const currentQuestion = question();
     const correctAnswer = answer(currentQuestion);
 
@@ -19,7 +19,6 @@ export default (rules, question, answer, input, output) => {
 
     if (userAnswer === correctAnswer) {
       output('Correct!');
-      counter += 1;
     } else {
       output(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       output(`Let's try again, ${userName}!`);
