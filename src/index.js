@@ -25,7 +25,6 @@ export default (rules, question, answer, input, output) => {
       output(`Let's try again, ${username}!`);
       return;
     }
-  };
-
+  }
   output(`Congratulations, ${username}!`);
 };
