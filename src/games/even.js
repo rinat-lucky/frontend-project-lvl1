@@ -1,4 +1,4 @@
-import { getRandomInt } from '../index.js';
+import getRandomInt from '../helpers.js';
 
 const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
 

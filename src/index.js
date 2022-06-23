@@ -1,5 +1,3 @@
-export const getRandomInt = (min = 1, max = 30) => Math.floor(Math.random() * (max - min)) + min;
-
 export const startGame = (gameRules, gameQuestion, gameAnswer, inText, outText) => {
   outText('Welcome to the Brain Games!');
   const username = inText('May I have your name? ');

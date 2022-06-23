@@ -1,4 +1,4 @@
-import { getRandomInt } from '../index.js';
+import getRandomInt from '../helpers.js';
 
 const rules = 'What number is missing in the progression?';
 
