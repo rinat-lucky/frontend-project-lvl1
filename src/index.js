@@ -3,10 +3,6 @@ export default (generateRound, input, output) => {
   const userName = input('May I have your name? ');
   output(`Hello, ${userName}!`);
 
-  if (!generateRound) {
-    return;
-  }
-
   const [rules] = generateRound();
   output(rules);
 
