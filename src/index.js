@@ -1,17 +1,17 @@
-export default (rules, question, answer, input, output) => {
+export default (generateRound, input, output) => {
   output('Welcome to the Brain Games!');
   const userName = input('May I have your name? ');
   output(`Hello, ${userName}!`);
 
-  if (!(rules && question && answer)) {
+  if (!generateRound) {
     return;
   }
-
+  
+  const [rules] = generateRound();
   output(rules);
 
   for (let i = 0; i !== 3; i += 1) {
-    const currentQuestion = question();
-    const correctAnswer = answer(currentQuestion);
+    const [, currentQuestion, correctAnswer] = generateRound();
 
     output(`Question: ${currentQuestion}`);
 

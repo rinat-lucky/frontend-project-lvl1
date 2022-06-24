@@ -1,10 +1,6 @@
 #!/usr/bin/env node
 
 import start from '../src/cli.js';
-import { rules, question, checkAnswer } from '../src/games/progression.js';
+import game from '../src/games/progression.js';
 
-start(
-  rules,
-  question,
-  checkAnswer,
-);
+start(game);
