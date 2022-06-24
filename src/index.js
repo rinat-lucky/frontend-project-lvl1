@@ -6,7 +6,7 @@ export default (generateRound, input, output) => {
   if (!generateRound) {
     return;
   }
-  
+
   const [rules] = generateRound();
   output(rules);
 
