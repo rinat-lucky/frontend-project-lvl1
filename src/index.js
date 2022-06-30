@@ -5,8 +5,8 @@ export default (generateRound, input, output) => {
   const userName = input('May I have your name? ');
   output(`Hello, ${userName}!`);
 
-  const [rules] = generateRound();
-  output(rules);
+  const [description] = generateRound();
+  output(description);
 
   for (let i = 0; i < ROUNDS_COUNT; i += 1) {
     const [, currentQuestion, correctAnswer] = generateRound();
