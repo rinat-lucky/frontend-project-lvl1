@@ -6,8 +6,8 @@ export default () => {
   const getQuestion = () => getRandomInt();
   const number = getQuestion();
 
-  const checkAnswer = (number) => {
-    if (number % 2 === 0) {
+  const checkAnswer = (num) => {
+    if (num % 2 === 0) {
       return 'yes';
     }
     return 'no';

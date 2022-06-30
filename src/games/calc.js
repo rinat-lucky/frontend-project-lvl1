@@ -15,8 +15,8 @@ export default () => {
 
   const question = getQuestion();
 
-  const checkAnswer = (question) => {
-    const [num1, operator, num2] = question.split(' ');
+  const checkAnswer = (text) => {
+    const [num1, operator, num2] = text.split(' ');
     switch (operator) {
       case '+':
         return (Number(num1) + Number(num2)).toString();
