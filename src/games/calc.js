@@ -3,16 +3,17 @@ import getRandomInt from '../helpers.js';
 export default () => {
   const rules = 'What is the result of the expression?';
 
-  const genQuestion = () => {
+  const getQuestion = () => {
     const num1 = getRandomInt();
     const num2 = getRandomInt();
     const operators = ['+', '-', '*'];
-    const operator = operators[getRandomInt(0, 2)];
+    const lastOperatorIndex = operators.length - 1;
+    const operator = operators[getRandomInt(0, lastOperatorIndex)];
 
     return `${num1} ${operator} ${num2}`;
   };
 
-  const question = genQuestion();
+  const question = getQuestion();
 
   const checkAnswer = () => { // функция принимает на вход случайно сгенерированное выражение
     const expArr = question.toString().split(' '); // приводим выражение к строке => к массиву из трёх слов
