@@ -1,9 +1,7 @@
-import getRandomInt from '../helpers.js';
-
 export default () => {
   const description = 'What is the result of the expression?';
 
-  const getQuestion = () => {
+  const getQuestion = (getRandomInt) => {
     const num1 = getRandomInt();
     const num2 = getRandomInt();
     const operators = ['+', '-', '*'];

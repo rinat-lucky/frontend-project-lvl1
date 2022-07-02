@@ -1,3 +1,5 @@
+import getRandomInt from './helpers.js';
+
 const ROUNDS_COUNT = 3;
 
 export default (game, input, output) => {
@@ -5,18 +7,17 @@ export default (game, input, output) => {
   const userName = input('May I have your name? ');
   output(`Hello, ${userName}!`);
 
-  const [description] = game();
-  output(description);
+  output(game.description);
 
   for (let i = 0; i < ROUNDS_COUNT; i += 1) {
-    const [, currentQuestion, correctAnswer] = game();
+    const [question, answer] = game.generateRound(getRandomInt);
 
-    output(`Question: ${currentQuestion}`);
+    output(`Question: ${question}`);
 
     const userAnswer = input('Your answer: ');
 
-    if (userAnswer !== correctAnswer) {
-      output(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+    if (userAnswer !== answer) {
+      output(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.`);
       output(`Let's try again, ${userName}!`);
       return;
     }
