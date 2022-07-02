@@ -1,15 +1,15 @@
 const ROUNDS_COUNT = 3;
 
-export default (generateRound, input, output) => {
+export default (game, input, output) => {
   output('Welcome to the Brain Games!');
   const userName = input('May I have your name? ');
   output(`Hello, ${userName}!`);
 
-  const [description] = generateRound();
+  const [description] = game();
   output(description);
 
   for (let i = 0; i < ROUNDS_COUNT; i += 1) {
-    const [, currentQuestion, correctAnswer] = generateRound();
+    const [, currentQuestion, correctAnswer] = game();
 
     output(`Question: ${currentQuestion}`);
 
