@@ -1,29 +1,29 @@
-import getRandomInt from '../helpers.js';
+const game = {
+  description: 'What number is missing in the progression?',
+  generateRound: (getRandomInt) => {
+    let missedNum;
 
-export default () => {
-  const rules = 'What number is missing in the progression?';
+    const getQuestion = () => {
+      const PROGRESSION_LENGTH = 10;
+      const stepOfProgression = getRandomInt(1, 5);
+      const firstNum = getRandomInt(1, 15);
+      const numberSeries = [firstNum];
 
-  let missedNum;
+      for (let i = 1; i < PROGRESSION_LENGTH; i += 1) {
+        const nextNum = firstNum + (stepOfProgression * i);
+        numberSeries.push(nextNum);
+      }
 
-  const genQuestion = () => {
-    const stepOfProgression = getRandomInt(1, 5);
-    const firstNum = getRandomInt(1, 15);
-    const arr = [firstNum];
+      const missedNumIndex = getRandomInt(0, 10);
+      missedNum = numberSeries[missedNumIndex];
+      numberSeries[missedNumIndex] = '..';
+      return numberSeries.join(' ');
+    };
+    const question = getQuestion();
+    const answer = missedNum.toString();
 
-    for (let i = 1; i < 10; i += 1) {
-      const nextNum = firstNum + (stepOfProgression * i);
-      arr.push(nextNum);
-    }
-
-    const missedNumIndex = getRandomInt(0, 10);
-    missedNum = arr[missedNumIndex];
-    arr[missedNumIndex] = '..';
-    return arr.join(' ');
-  };
-  const question = genQuestion();
-
-  const checkAnswer = () => missedNum.toString();
-  const answer = checkAnswer();
-
-  return [rules, question, answer];
+    return [question, answer];
+  },
 };
+
+export default game;
