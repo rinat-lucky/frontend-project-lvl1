@@ -1,7 +1,6 @@
 const game = {
   description: 'What is the result of the expression?',
   generateRound: (getRandomInt) => {
-
     const getQuestion = () => {
       const num1 = getRandomInt();
       const num2 = getRandomInt();

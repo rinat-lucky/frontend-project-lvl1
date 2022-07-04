@@ -1,17 +1,19 @@
-import getRandomInt from '../helpers.js';
-
-export default () => {
-  const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  const genQuestion = () => getRandomInt();
-  const question = genQuestion();
-  const checkAnswer = () => {
-    for (let i = 2; i < question; i += 1) {
-      if (question % i === 0) {
-        return 'no';
-      }
+const isPrime = (number) => {
+  for (let i = 2; i < number; i += 1) {
+    if ((number % i === 0) || (number === 1)) {
+      return false;
     }
-    return question === 1 ? 'no' : 'yes';
-  };
-  const answer = checkAnswer();
-  return [rules, question, answer];
+  }
+  return true;
 };
+
+const game = {
+  description: 'Answer "yes" if given number is prime. Otherwise answer "no".',
+  generateRound: (getRandomInt) => {
+    const question = getRandomInt();
+    const answer = isPrime(question) ? 'yes' : 'no';
+    return [question, answer];
+  },
+};
+
+export default game;

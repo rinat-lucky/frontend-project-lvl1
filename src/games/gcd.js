@@ -4,12 +4,12 @@ const game = {
     const genQuestion = () => {
       const num1 = getRandomInt();
       const num2 = getRandomInt(15, 25);
-  
+
       return `${num1} ${num2}`;
     };
-  
+
     const question = genQuestion();
-  
+
     const checkAnswer = () => {
       const expArr = question.toString().split(' ');
       const num1 = Number(expArr[0]);
@@ -22,7 +22,7 @@ const game = {
       }
       return gcd.toString();
     };
-  
+
     const answer = checkAnswer();
     return [question, answer];
   },
