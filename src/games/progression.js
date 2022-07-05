@@ -14,13 +14,13 @@ const game = {
   generateRound: (getRandomInt) => {
     const getQuestion = () => {
       const PROGRESSION_LENGTH = 10;
-      const stepOfProgress = getRandomInt(1, 5);
+      const stepOfProgression = getRandomInt(1, 5);
       const firstEl = getRandomInt(1, 15);
       const missedNumIndex = getRandomInt(0, 10);
       const [numberSeries, missedNumber] = makeProgressionWithMissedNum(
         firstEl,
         PROGRESSION_LENGTH,
-        stepOfProgress,
+        stepOfProgression,
         missedNumIndex,
       );
       return [numberSeries.join(' '), missedNumber];
