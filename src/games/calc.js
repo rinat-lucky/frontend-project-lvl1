@@ -1,3 +1,16 @@
+const calc = (num1, num2, operator) => {
+  switch (operator) {
+    case '+':
+      return num1 + num2;
+    case '-':
+      return num1 - num2;
+    case '*':
+      return num1 * num2;
+    default:
+      throw new Error('Unknown operator!');
+  }
+};
+
 const game = {
   description: 'What is the result of the expression?',
   generateRound: (getRandomInt) => {
@@ -13,16 +26,7 @@ const game = {
 
     const checkAnswer = (text) => {
       const [num1, operator, num2] = text.split(' ');
-      switch (operator) {
-        case '+':
-          return (Number(num1) + Number(num2)).toString();
-        case '-':
-          return (Number(num1) - Number(num2)).toString();
-        case '*':
-          return (Number(num1) * Number(num2)).toString();
-        default:
-          return console.log('Произошла ошибка в вычислениях');
-      }
+      return calc(Number(num1), Number(num2), operator).toString();
     };
     const answer = checkAnswer(question);
     return [question, answer];

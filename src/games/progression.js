@@ -1,26 +1,32 @@
+const makeProgressionWithMissedNum = (firstNum, progressLength, stepOfProgress, missedNumIndex) => {
+  const progression = [firstNum];
+  for (let i = 1; i < progressLength; i += 1) {
+    const nextNum = firstNum + (stepOfProgress * i);
+    progression.push(nextNum);
+  }
+  const missedNum = progression[missedNumIndex];
+  progression[missedNumIndex] = '..';
+  return [progression, missedNum];
+};
+
 const game = {
   description: 'What number is missing in the progression?',
   generateRound: (getRandomInt) => {
-    let missedNum;
-
     const getQuestion = () => {
       const PROGRESSION_LENGTH = 10;
-      const stepOfProgression = getRandomInt(1, 5);
-      const firstNum = getRandomInt(1, 15);
-      const numberSeries = [firstNum];
-
-      for (let i = 1; i < PROGRESSION_LENGTH; i += 1) {
-        const nextNum = firstNum + (stepOfProgression * i);
-        numberSeries.push(nextNum);
-      }
-
+      const stepOfProgress = getRandomInt(1, 5);
+      const firstEl = getRandomInt(1, 15);
       const missedNumIndex = getRandomInt(0, 10);
-      missedNum = numberSeries[missedNumIndex];
-      numberSeries[missedNumIndex] = '..';
-      return numberSeries.join(' ');
+      const [numberSeries, missedNumber] = makeProgressionWithMissedNum(
+        firstEl,
+        PROGRESSION_LENGTH,
+        stepOfProgress,
+        missedNumIndex,
+      );
+      return [numberSeries.join(' '), missedNumber];
     };
-    const question = getQuestion();
-    const answer = missedNum.toString();
+    const [question, answerNum] = getQuestion();
+    const answer = answerNum.toString();
 
     return [question, answer];
   },
