@@ -12,7 +12,7 @@ const game = {
   generateRound: (getRandomInt) => {
     const question = getRandomInt();
     const answer = isPrime(question) ? 'yes' : 'no';
-    return [question, answer];
+    return { question, answer };
   },
 };
 

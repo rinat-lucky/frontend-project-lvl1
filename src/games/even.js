@@ -5,7 +5,7 @@ const game = {
   generateRound: (getRandomInt) => {
     const question = getRandomInt();
     const answer = isEven(question) ? 'yes' : 'no';
-    return [question, answer];
+    return { question, answer };
   },
 };
 

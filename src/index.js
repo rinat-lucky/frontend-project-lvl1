@@ -10,7 +10,7 @@ export default (game, input, output) => {
   output(game.description);
 
   for (let i = 0; i < ROUNDS_COUNT; i += 1) {
-    const [question, answer] = game.generateRound(getRandomInt);
+    const { question, answer } = game.generateRound(getRandomInt);
 
     output(`Question: ${question}`);
 

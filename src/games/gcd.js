@@ -20,7 +20,7 @@ const game = {
 
     const [num1, num2] = question.split(' ');
     const answer = getGreatestCommonDivisor(Number(num1), Number(num2)).toString();
-    return [question, answer];
+    return { question, answer };
   },
 };
 
