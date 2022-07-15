@@ -14,7 +14,7 @@ const game = {
   generateRound: (getRandomInt) => {
     const step = getRandomInt(1, 5);
     const firstElement = getRandomInt(1, 15);
-    const missedNumIndex = getRandomInt(1, 9);
+    const missedNumIndex = getRandomInt(1, 10);
     const progression = createProgression(
       firstElement,
       PROGRESSION_LENGTH,

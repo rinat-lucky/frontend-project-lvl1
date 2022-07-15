@@ -1,3 +1,5 @@
+const operators = ['+', '-', '*'];
+
 const calc = (num1, num2, operator) => {
   switch (operator) {
     case '+':
@@ -16,7 +18,6 @@ const game = {
   generateRound: (getRandomInt) => {
     const num1 = getRandomInt();
     const num2 = getRandomInt();
-    const operators = ['+', '-', '*'];
     const lastOperatorIndex = operators.length - 1;
     const operator = operators[getRandomInt(0, lastOperatorIndex)];
 
