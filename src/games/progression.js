@@ -1,10 +1,10 @@
 const PROGRESSION_LENGTH = 10;
 
-const createProgression = (firstNum, progressLength, step) => {
+const createProgression = (firstElement, progressionLength, step) => {
   const progression = [];
-  for (let i = 0; i < progressLength; i += 1) {
-    const nextNum = firstNum + (step * i);
-    progression.push(nextNum);
+  for (let i = 0; i < progressionLength; i += 1) {
+    const nextElement = firstElement + (step * i);
+    progression.push(nextElement);
   }
   return progression;
 };
