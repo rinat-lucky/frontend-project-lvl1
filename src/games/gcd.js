@@ -11,14 +11,9 @@ const getGreatestCommonDivisor = (num1, num2) => {
 const game = {
   description: 'Find the greatest common divisor of given numbers.',
   generateRound: (getRandomInt) => {
-    const getQuestion = () => {
-      const num1 = getRandomInt(3, 20);
-      const num2 = getRandomInt(15, 25);
-      return `${num1} ${num2}`;
-    };
-    const question = getQuestion();
-
-    const [num1, num2] = question.split(' ');
+    const num1 = getRandomInt(3, 20);
+    const num2 = getRandomInt(15, 25);
+    const question = `${num1} ${num2}`;
     const answer = getGreatestCommonDivisor(Number(num1), Number(num2)).toString();
     return { question, answer };
   },
